@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/QandeLand/gitops-platform/backend
+  repository: ghcr.io/qandeland/gitops-platform/backend
   pullPolicy: IfNotPresent
   tag: "latest"
 
