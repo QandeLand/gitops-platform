@@ -7,7 +7,8 @@ app = Flask(__name__)
 def index():
     return jsonify({
         "message": "Backend is running",
-        "version": os.getenv("APP_VERSION", "1.0.0")
+        "version": os.getenv("APP_VERSION", "1.0.0"),
+        "gitops": "powered by ArgoCD + GitHub Actions"
     })
 
 @app.route("/health")
