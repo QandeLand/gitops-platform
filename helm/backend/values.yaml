@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: ghcr.io/qandeland/gitops-platform/backend
   pullPolicy: IfNotPresent
-  tag: "latest"
+  tag: "2a03ee0"
 
 service:
   type: ClusterIP
