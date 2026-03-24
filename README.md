@@ -167,3 +167,18 @@ kubectl port-forward svc/monitoring-grafana -n monitoring 3000:80 &
 - Why secrets management matters and how to handle it at each layer (local, CI, cluster)
 
 ---
+
+## Ingress
+
+The backend is exposed via Traefik ingress controller. Add this to your `/etc/hosts`:
+```
+127.0.0.1 backend.local
+```
+
+Then access directly without port-forwarding:
+
+| Endpoint | URL |
+|---|---|
+| Health check | http://backend.local:8080/health |
+| API root | http://backend.local:8080/ |
+| Items | http://backend.local:8080/items |
