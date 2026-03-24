@@ -1,0 +1,6 @@
+apiVersion:
+kind:
+metadata:
+spec.rules:
+  name: backed-dev-backend
+  port: 5000
