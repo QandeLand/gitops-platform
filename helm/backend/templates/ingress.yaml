@@ -10,5 +10,13 @@ metadata:
 
 spec:
   rules:
-  name: backed-dev-backend
-  port: 5000
+    - host: {{ .Values.ingress.host }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Release.Name }}-backend
+                port:
+                  number: {{ .Values.service.port }}

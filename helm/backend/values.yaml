@@ -20,3 +20,6 @@ resources:
 env:
   APP_VERSION: "1.0.0"
 
+ingress:
+  enabled: true
+  host: backend.local
