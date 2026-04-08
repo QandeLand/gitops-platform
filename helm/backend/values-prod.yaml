@@ -1,0 +1,13 @@
+replicaCount: 3
+resources:
+  limits:
+    cpu: 400m
+    memory: 256Mi
+  requests:
+    cpu: 200m
+    memory: 128Mi
+env:
+  APP_VERSION: "1.0.0-prod"
+ingress:
+  enabled: true
+  host: backend-prod.local
