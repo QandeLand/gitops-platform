@@ -42,22 +42,33 @@ and self-heals it back to what's in git within minutes.
 ```
 gitops-platform/
 ├── apps/
-│   └── backend/          # Flask API — the app being deployed
+│   └── backend/          # Flask API - the app being deployed
 │       ├── app.py
 │       ├── Dockerfile
 │       └── requirements.txt
+│   └── frontend/         # Nginx HTML dashboard
+│       ├── index.html
+│       ├── nginx.conf
+│       └── Dockerfile
 ├── helm/
-│   └── backend/          # Helm chart — deployment + service templates
+│   └── backend/          # Backend Helm chart - deployment + service templates
+│   │    ├── Chart.yaml
+│   │    ├── values.yaml
+│   │    ├── values-prod.yaml
+│   │    └── templates/
+│   └── frontend/         # Frontend Helm chart
 │       ├── Chart.yaml
 │       ├── values.yaml
 │       └── templates/
 ├── argocd/
 │   └── applications/     # ArgoCD Application manifests
 │       ├── backend-dev.yaml
-│       └── monitoring.yaml
+│       ├── backend-prod.yaml
+│       ├── frontend-dev.yaml
+│       └── image-updater-backend.yaml
 └── .github/
     └── workflows/
-        └── ci.yaml       # GitHub Actions pipeline
+        └── ci.yaml       # Builds backend and frontend images
 ```
 
 ---
