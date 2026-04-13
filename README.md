@@ -12,7 +12,7 @@ No manual `kubectl apply`. No manual `helm install`. Just git.
 When I push a change to this repo:
 
 1. **GitHub Actions** picks it up, builds a new Docker image and pushes it to GHCR
-2. The pipeline commits the new image tag back into the Helm chart values
+2. ArgoCD Image Updater detects the new image in GHCR and updates the cluster automatically
 3. **ArgoCD** detects that git changed and automatically syncs the cluster
 4. New pods roll out — zero manual steps
 
