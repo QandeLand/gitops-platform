@@ -108,6 +108,14 @@ The commit message is visible — ArgoCD knows exactly which git commit it deplo
 
 ---
 
+## All applications — overview
+
+All three ArgoCD applications running simultaneously — dev backend, prod backend, and frontend — all Healthy and Synced.
+
+![ArgoCD all applications](docs/screenshots/argocd-all-applications.png)
+
+---
+
 ## Grafana — full observability
 
 Node-level metrics (CPU, memory, disk, network) collected by Prometheus
