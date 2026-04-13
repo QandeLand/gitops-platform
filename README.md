@@ -62,7 +62,7 @@ gitops-platform/
 
 ## How the GitOps loop works
 ```
-You push code
+Push code
     │
     ▼
 GitHub Actions builds Docker image
@@ -71,13 +71,13 @@ GitHub Actions builds Docker image
 Image pushed to GHCR with git SHA tag
     │
     ▼
-CI commits new tag to helm/backend/values.yaml
+ArgoCD Image Updater detects new image in GHCR
     │
     ▼
-ArgoCD detects git change (polls every 3 min)
+ArgoCD syncs cluster automatically
     │
     ▼
-Cluster synced automatically — new pods running
+New pods running — zero manual steps
 ```
 
 ---
