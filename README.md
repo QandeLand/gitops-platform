@@ -180,7 +180,8 @@ kubectl port-forward svc/monitoring-grafana -n monitoring 3000:80 &
 - How ArgoCD self-healing works in practice — it genuinely reverses manual cluster changes
 - Setting up a full observability stack and understanding what each component does (scraping, storage, visualisation, alerting are separate concerns)
 - Why secrets management matters and how to handle it at each layer (local, CI, cluster)
-
+- How ArgoCD Image Updater eliminates the need for CI to commit image tags back to git — separating build concerns from deployment concerns
+- Deploying a multi-service architecture with a frontend proxying API calls to a backend through Nginx — and debugging real failures like missing imagePullSecrets and wrong YAML indentation
 ---
 
 ## Ingress
