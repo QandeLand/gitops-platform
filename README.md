@@ -167,7 +167,9 @@ kubectl port-forward svc/monitoring-grafana -n monitoring 3000:80 &
 |---|---|---|
 | ArgoCD | https://localhost:9090 | admin / (get from secret) |
 | Grafana | http://localhost:3000 | admin / admin123 |
-| Backend API | http://localhost:5000 | — |
+| Backend dev | http://backend.local:8080 | — |
+| Backend prod | http://backend-prod.local:8080 | — |
+| Frontend | http://frontend.local:8080 | — |
 
 ---
 
@@ -186,6 +188,8 @@ kubectl port-forward svc/monitoring-grafana -n monitoring 3000:80 &
 The backend is exposed via Traefik ingress controller. Add this to your `/etc/hosts`:
 ```
 127.0.0.1 backend.local
+127.0.0.1 backend-prod.local
+127.0.0.1 frontend.local
 ```
 
 Then access directly without port-forwarding:
