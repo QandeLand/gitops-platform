@@ -116,6 +116,13 @@ All three ArgoCD applications running simultaneously — dev backend, prod backe
 
 ---
 
+## Frontend dashboard
+
+The frontend service running in Kubernetes, calling the backend API through Nginx and displaying live data.
+
+![Frontend dashboard](docs/screenshots/frontend-dashboard.png)
+---
+
 ## Grafana — full observability
 
 Node-level metrics (CPU, memory, disk, network) collected by Prometheus
