@@ -33,6 +33,8 @@ and self-heals it back to what's in git within minutes.
 | Metrics | Prometheus | Scrapes all cluster and pod metrics |
 | Dashboards | Grafana | Pre-built K8s dashboards + custom alerts |
 | Alerts | Alertmanager | Routes alerts for pod crashes, node issues |
+| Image Updater | ArgoCD Image Updater | Auto-detects new images in GHCR, no CI commit needed |
+| Frontend | Nginx | Serves HTML dashboard, proxies API calls to backend |
 
 ---
 
