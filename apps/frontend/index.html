@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitOps Dashboard</title>
+</head>
+<body>
+  <h1>GitOps Dashboard</h1>
+
+  <h2>Backend Status</h2>
+  <p id="status">Loading...</p>
+  <p>Version: <span id="version">-</span></p>
+
+  <h2>Items</h2>
+  <ul id="items"></ul>
+
+  <script>
+    fetch('/api/')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('status').textContent = 'Connected';
+        document.getElementById('version').textContent = data.version;
+      })
+      .catch(() => {
+        document.getElementById('status').textContent = 'Cannot reach backend';
+      });
+
+    fetch('/api/items')
+      .then(r => r.json())
+      .then(data => {
+        const ul = document.getElementById('items');
+        ul.innerHTML = data.items.map(i => '<li>' + i + '</li>').join('');
+      });
+  </script>
+</body>
+</html>
