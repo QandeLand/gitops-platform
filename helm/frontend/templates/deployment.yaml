@@ -11,7 +11,7 @@ spec:
     metadata:
       labels:
         app: {{ .Release.Name }}-frontend
-spec:
+    spec:
       imagePullSecrets:
         - name: ghcr-secret
       containers:
