@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'apps/backend/**'
+      - 'apps/frontend/**'
 env:
   REGISTRY: ghcr.io
   IMAGE: ghcr.io/qandeland/gitops-platform/backend
