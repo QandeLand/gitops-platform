@@ -17,7 +17,7 @@ def health():
 
 @app.route("/items")
 def items():
-    return jsonify({"items": ["itemvv1", "item2", "item3"]})  
+    return jsonify({"items": ["item1", "item2", "item3"]})  # Changed items to a list for better JSON structure
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
